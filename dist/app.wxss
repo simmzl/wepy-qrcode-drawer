@@ -1,0 +1,30 @@
+button {
+  width: 200rpx;
+  height: 60rpx;
+  display: inline-block;
+  margin-top: 40rpx;
+  padding: 0 20rpx;
+  line-height: 60rpx;
+  font-size: 24rpx;
+  color: #000;
+  background-color: #ffffff;
+  border: 1px solid #000;
+}
+button.button-hover {
+  opacity: .8;
+  color: #000;
+  background-color: #ffffff;
+}
+button[disabled] {
+  opacity: .4;
+  color: #000 !important;
+}
+page {
+  height: 100%;
+  padding-top: 20rpx;
+}
+.app {
+  height: 100%;
+  font-size: 24rpx;
+  background-color: #FFF;
+}

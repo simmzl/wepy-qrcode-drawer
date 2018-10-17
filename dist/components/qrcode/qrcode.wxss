@@ -1,0 +1,4 @@
+.canvas-content {
+  width: 600rpx;
+  height: 600rpx;
+}

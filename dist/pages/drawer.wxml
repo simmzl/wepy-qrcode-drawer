@@ -1,0 +1,18 @@
+
+    <view class="app">
+        <view class="qr-container">
+            
+    <canvas canvas-id="qrcode" class="canvas-content" hidden="{{false}}"/>
+
+        </view>
+        <input type="text" placeholder="输入URL" class="qr-input" bindinput="handleInput" bindconfirm="handleInput" value="{{url}}"/>
+        <view>
+            <button bindtap="inputDefault">DEMO</button>
+        </view>
+        <view>
+            <button bindtap="toDraw">生成二维码</button>
+        </view>
+        <view>
+            <button bindtap="download">保存二维码</button>
+        </view>
+    </view>

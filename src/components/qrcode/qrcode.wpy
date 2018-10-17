@@ -1,0 +1,47 @@
+<template>
+    <canvas canvas-id="qrcode" class="canvas-content"></canvas>
+</template>
+<script>
+import wepy from "wepy";
+import QR from "@/components/qrcode/tool.js";
+
+export default class Qrcode extends wepy.page {
+
+    config = {
+        navigationBarTitleText: "绘制二维码"
+    };
+
+    data = {
+        width: 600,
+        height: 600,
+        canvasId: "qrcode"
+    };
+
+    // 计算二维码长宽以适应不同分辨率屏幕
+    convertLength(length) {
+        return Math.round(wepy.getSystemInfoSync().windowWidth * length / 750);
+    }
+
+    // 生成二维码
+    async createQrcode(url) {
+        if (!url) {
+            return wepy.showToast({
+                title: "未输入URL",
+                icon: "none"
+            });
+        }
+        const me = this;
+        QR.api.draw(url, {
+            ctx: wepy.createCanvasContext(me.canvasId),
+            width: me.convertLength(me.width),
+            height: me.convertLength(me.height)
+        });
+    }
+}
+</script>
+<style lang="less">
+.canvas-content {
+    width: 600rpx;
+    height: 600rpx;
+}
+</style>

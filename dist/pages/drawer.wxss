@@ -1,0 +1,19 @@
+@import "./../components/qrcode/qrcode.wxss";
+.app {
+  text-align: center;
+}
+.app .qr-container {
+  display: block;
+  width: 600rpx;
+  height: 600rpx;
+  margin: 0 auto 40rpx auto;
+  border: 1px solid black;
+}
+.app .qr-input {
+  width: 660rpx;
+  height: 70rpx;
+  margin: 0 auto;
+  padding-left: 15rpx;
+  border-bottom: 1px solid black;
+  font-size: 24rpx;
+}

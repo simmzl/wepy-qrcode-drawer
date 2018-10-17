@@ -1,0 +1,39 @@
+<style lang="less" src="@/assets/css/reset.less"></style>
+<style lang="less">
+    page {
+        height:100%;
+        padding-top: 20rpx;
+    }
+    .app {
+        height:100%;
+        font-size: 24rpx;
+        background-color: #FFF;
+    }
+</style>
+
+<script>
+import wepy from "wepy";
+import "wepy-async-function";
+
+export default class extends wepy.app {
+    config = {
+        pages: [
+            "pages/drawer"
+        ],
+        window: {
+            backgroundTextStyle: "light",
+            navigationBarBackgroundColor: "#fff",
+            navigationBarTitleText: "Demos",
+            navigationBarTextStyle: "black"
+        }
+    }
+
+    constructor() {
+        super();
+        this.use("requestfix");
+        this.use("promisify");
+    }
+
+    onLaunch() {}
+}
+</script>

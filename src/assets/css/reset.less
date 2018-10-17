@@ -1,0 +1,27 @@
+@import "./variable.less";
+
+button {
+    width: 200rpx; 
+    height: 60rpx;
+    display: inline-block;
+    margin-top: 40rpx;
+    padding: 0 20rpx;
+    line-height: 60rpx;
+    font-size: 24rpx;
+    color: @color-primary;
+    background-color: #ffffff;
+    border: 1px solid @color-primary;
+    // margin: 34rpx auto;
+    &.button-hover {
+        opacity: .8;
+        color: @color-primary;
+        background-color: #ffffff;
+    }
+    &[disabled] {
+        opacity: .4;
+        color: @color-primary !important;
+    }
+}
+
+button[type=primary] {
+}
